@@ -6,7 +6,7 @@ authors: ["Ricardo Bigolin Lanfredi", "Joyce D Schroeder", "Clement Vachet", "To
 publication_types: ["1"]
 abstract: ""
 featured: false
-publication: "*arXiv preprint arXiv:1908.10468*. Accepted for MICCAI 2019 main conference."
+publication: "*arXiv preprint arXiv:1908.10468*. Presented at MICCAI 2019 main conference"
 url_pdf: "https://arxiv.org/abs/1908.10468"
 url_code: "https://github.com/ricbl/vrgan"
 url_poster: "files/miccai2019_poster.pdf"

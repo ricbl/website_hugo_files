@@ -15,8 +15,10 @@ role: PhD student
 # Organizations/Affiliations
 organizations:
 - name: University of Utah
-  url: "ricbl.github.io"
-
+  url: "https://www.utah.edu/"
+- name: SCI Institute
+  url: "https://www.sci.utah.edu/"
+ 
 # Short bio (displayed in user profile at end of posts)
 bio: I am a PhD student at the University of Utah researching the intersection of Computer Vision, Deep Learning, and Medical Image Analysis. 
 
@@ -24,14 +26,15 @@ interests:
 - Computer Vision
 - Medical Image Analysis
 - Deep Learning
-- Artificial Intelligence
+- Model Interpretability
+- Adversarial Robustness
 
 
 education:
   courses:
   - course: PhD in Electrical Engineering
     institution: University of Utah
-    year: 2017 -
+    year: 2017 - Current
   - course: MEng - Diplôme d'Ingénieur
     institution: CentralSupélec
     year: 2012 - 2016

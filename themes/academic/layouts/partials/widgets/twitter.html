@@ -1,0 +1,63 @@
+{{ $ := .root }}
+{{ $page := .page }}
+<script> //from https://stackoverflow.com/questions/42395134/how-to-embed-a-twitter-timeline-without-retweets
+    window.twttr = (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+
+        t._e = [];
+        t.ready = function (f) {
+            t._e.push(f);
+        };
+
+        return t;
+    }(document, "script", "twitter-wjs"));
+
+    twttr.ready(function (twttr) {
+        twttr.events.bind("rendered", function (event) {
+            var frameDoc = event.target.contentDocument;
+
+            // initially hide retweets
+            var hideRetweets = function () {
+                var retweets = frameDoc.querySelectorAll('div.timeline-Tweet--isRetweet');
+                retweets.forEach(function (node) {
+                    if (node.parentNode && node.parentNode.style !== 'display: none;') { // (in)sanity check
+                        node.parentNode.style = 'display: none;' // hide entire parent li tag
+                    }
+                });
+            };
+
+            hideRetweets();
+
+            // Twitter widget emitts no events on updates so we hook up ourselves to ol element to listen on it for additions of children
+            var watcher = new MutationObserver(function (mutations) {
+                // check whether new tweets arrived
+                var hasNewTweets = mutations.some(function (mutation) {
+                    return mutation.addedNodes.length > 0;
+                });
+                if (hasNewTweets) {
+                    hideRetweets(); // rescan all tweets as it is easier
+                }
+            });
+            watcher.observe(frameDoc.querySelector('ol.timeline-TweetList'), { childList: true });
+        });
+    });
+</script>
+<!-- Twitter widget -->
+<div class="row">
+  <div class="col-12 col-lg-4 section-heading">
+    <h1>{{ with $page.Title }}{{ . | markdownify }}{{ end }}</h1>
+    {{ with $page.Params.subtitle }}<p>{{ . | markdownify }}</p>{{ end }}
+  </div>
+  
+  <div class="col-12 col-lg-8">
+        {{ with $page.Params.handle}}<a class="twitter-timeline" data-lang="en" data-width="430" data-height="800" href="https://twitter.com/{{.}}?ref_src=twsrc%5Etfw">Tweets by {{.}}</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> {{end }}
+  </div>
+</div>
+
+
