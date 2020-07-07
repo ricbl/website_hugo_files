@@ -6,7 +6,7 @@ authors: ["Ricardo Bigolin Lanfredi", "Joyce D Schroeder", "Clement Vachet", "To
 publication_types: ["1"]
 abstract: ""
 featured: false
-publication: "*arXiv preprint arXiv:...*. Accepted for MICCAI 2020 main conference"
-url_pdf: "https://arxiv.org/abs/..."
+publication: "*arXiv preprint arXiv:2007.01975*. Accepted for MICCAI 2020 main conference"
+url_pdf: "https://arxiv.org/abs/2007.01975"
 url_code: "https://github.com/ricbl/defigan"
 ---
