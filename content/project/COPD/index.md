@@ -44,7 +44,7 @@ slides: ""
 <ul>
      <li> modeling the modifications caused by disease severity in the chest x-rays (<a href="/publication/lanfredi-2019-adversarial/">check here</a>),</li>
      <li> using deformation fields to model disease effect to find dataset biases (<a href="/publication/lanfredi-2020-flow/">check here</a>),</li>
-     <li> proposing a mathematical formulation to associate interpretability alignment with adversarial robustness (still unpublished), and </li>
-     <li> showing that the chest x-rays provide more information about COPD diagnosis than radiologist reports (still unpublished).</li>
+     <li> proposing a mathematical formulation to associate interpretability alignment with adversarial robustness, and </li>
+     <li> showing that the chest x-rays provide more information about COPD diagnosis than radiologist reports (<a href="/publication/schroeder-2021-copd/">check here</a>).</li>
  </ul>
  </div>

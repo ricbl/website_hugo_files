@@ -3,7 +3,7 @@
 
 title: "Eye-tracking Annotations for Deep Learning Radiology Applications"
 summary: ""
-authors: ["Ricardo Bigolin Lanfredi", "Joyce D Schroeder", "Vivek Srikumar", "Trafton Drew", "Tolga Tasdizen"]
+authors: ["Ricardo Bigolin Lanfredi", "Mingyuan Zhang", "William F Auffermann", "Jessica Chan", "Phuong-Anh T. Duong","Vivek Srikumar", "Trafton Drew", "Joyce D Schroeder", "Tolga Tasdizen"]
 tags: []
 categories: []
 date: 2020-04-01T16:50:07-06:00
@@ -40,10 +40,12 @@ url_poster: ""
 #   Otherwise, set `slides = ""`.
 slides: ""
 ---
-<div style="text-align: justify "> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This project is NIH-funded, starting in 2020, and aims to collect eye-tracking data as a non-intrusive way of providing localization information on labels associated with each x-ray. The data collection will include the audio recording of reports, making the association between region looked and word said at a given moment possible. The project's steps include: 
+
+<div style="text-align: justify "> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This project is NIH-funded, started in 2020, and aims to collect eye-tracking data as a non-intrusive way of providing localization information on labels associated with each chest x-ray. The data collection will include timestamped transcriptions of the dictations o radiological reports, making the association between region looked and word said at a given moment possible. The project's steps include: 
 <ul>
-    <li>analyzing the alignment between dictation / eye fixations / pupil dilation / bounding box annotations,</li>
-    <li>providing all collected data as an open dataset, and</li>
+    <li>providing all collected data as an open dataset,</li>
+	<li>evaluating interpretability methods for deep learning methods when compared to the attention from radiologists, and</li>
     <li>using collected data as supervision for novel deep learning models.</li>
 </ul>
+<a href="https://www.sci.utah.edu/eyetracking-cxr.html">Project Homepage</a>
  </div>
